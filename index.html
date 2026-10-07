@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SOHEYB+ | Snapchat+ Premium</title>
-  <!-- TikTok Pixel Code Start -->
+<!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
 var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-
   ttq.load('DB3D87BC77U534NEIEJ0');
   ttq.page();
+  ttq.track('ViewContent',{contents:[{content_id:'snapchat_plus',content_type:'product',content_name:'Snapchat+ Premium'}],value:2700,currency:'DZD'});
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
@@ -176,6 +176,7 @@ $('seg').onclick=e=>{const b=e.target.closest('[data-os]');if(!b)return;os=b.dat
  if(os==='android'){$('toast').classList.add('on');clearTimeout(tt);tt=setTimeout(()=>$('toast').classList.remove('on'),2600)}
  else{$('toast').classList.remove('on');sc.scrollTop=plans.indexOf(plan)*IH;wheel()}};
 $('go').onclick=()=>{if(os==='android')return;
+ window.ttq&&ttq.track('PlaceAnOrder',{contents:[{content_id:String(plan.p),content_type:'product',content_name:'Snapchat+ '+plan.t}],value:price(),currency:'DZD'});
  const m=`مرحباً، أريد طلب اشتراك Snapchat+ Premium\nالجهاز: iPhone\nالمدة: ${plan.t}\nطريقة الدفع: ${pay.n}${pay.extra?' ('+pay.extra+')':''}\nالسعر الإجمالي: ${fmt(price())} دج`;
  window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(m),'_blank')};
 render();
